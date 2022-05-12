@@ -12,13 +12,6 @@ span {
   display: block;
 }
 
-a:visited {
-  color: #800080; /* Цвет посещённой ссылки */
-}
-a:hover {
-  color: #f9f7f7; /* Цвет ссылки при наведении на нее курсора мыши */
-  text-decoration: underline; /* Добавляем подчеркивание */
-}
 img {
   max-width: 100%;
   display: block;
