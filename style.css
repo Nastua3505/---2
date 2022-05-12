@@ -66,9 +66,6 @@ p {
   max-width: 1330px;
   margin: 0 auto;
 }
-.header {
-  background: url(../img/fon1.png);
-}
 
 .menu-list__item a {
   font-size: 20px;
@@ -78,13 +75,7 @@ p {
   display: block;
   list-style-type: none;
 }
-.menu-list__item a:visited {
-  color: #0b0b0b; /* Цвет посещённой ссылки */
-}
-.menu-list__item a:hover {
-  color: #6a408d; /* Цвет ссылки при наведении на нее курсора мыши */
-  text-decoration: underline; /* Добавляем подчеркивание */
-}
+
 .menu-list {
   text-decoration: none;
   display: flex;
