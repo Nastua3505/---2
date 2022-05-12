@@ -12,6 +12,13 @@ span {
   display: block;
 }
 
+a:visited {
+  color: #800080; /* Цвет посещённой ссылки */
+}
+a:hover {
+  color: #f9f7f7; /* Цвет ссылки при наведении на нее курсора мыши */
+  text-decoration: underline; /* Добавляем подчеркивание */
+}
 img {
   max-width: 100%;
   display: block;
@@ -71,6 +78,13 @@ p {
   display: block;
   list-style-type: none;
 }
+.menu-list__item a:visited {
+  color: #0b0b0b; /* Цвет посещённой ссылки */
+}
+.menu-list__item a:hover {
+  color: #6a408d; /* Цвет ссылки при наведении на нее курсора мыши */
+  text-decoration: underline; /* Добавляем подчеркивание */
+}
 .menu-list {
   text-decoration: none;
   display: flex;
@@ -104,13 +118,42 @@ p {
   border-radius: 500px;
   padding: 14px 0;
 }
+.hamburger-btn.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.hamburger-btn.open span {
+  background: #fff;
+}
+.hamburger-btn span:not(:last-child) {
+  margin-bottom: 4px;
+}
+.hamburger-btn span {
+  width: 100%;
+  height: 3px;
+  border-radius: 9px;
+  background: #000;
+  position: absolute;
+  opacity: 1;
+  left: 0;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
 .hamburger-btn {
   display: none;
   width: 30px;
   height: 20px;
   background: transparent;
   position: relative;
+  z-index: 700;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
   margin-right: 30px;
+}
+span {
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 .main-screen {
   padding: 51px;
@@ -421,8 +464,6 @@ span {
 }
 
 .authors-avatars {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: absolute;
   left: 44%;
@@ -449,6 +490,8 @@ span {
   max-width: 1102px;
   margin: 0 auto;
   padding: 27px 0;
+  -moz-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 30%);
 }
 
 .pricing-blocks__item {
@@ -534,11 +577,16 @@ span {
 .slider-posts {
   position: relative;
   display: flex;
+  padding: 20px;
+  justify-content: space-between;
 }
 
 .post {
   margin: 15px;
-  max-width: 423px;
+  max-width: 450px;
+  justify-content: space-between;
+  -moz-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 30%);
 }
 
 .post__img {
@@ -692,7 +740,6 @@ span {
   }
 }
 
-/* Large: 992px - 1199px */
 @media (max-width: 1199px) {
   .container {
     max-width: 960px;
@@ -825,6 +872,9 @@ span {
 }
 
 @media (max-width: 767px) {
+  .hamburger-btn {
+    display: block;
+  }
   .container {
     max-width: 540px;
   }
@@ -878,7 +928,6 @@ span {
   }
   .menu-list {
     width: 100%;
-
     flex-direction: column;
     padding-top: 60px;
   }
@@ -888,7 +937,9 @@ span {
     text-align: center;
     padding: 15px 0;
   }
-
+  .menu-list li:not(:last-child) {
+    margin-bottom: 30px;
+  }
   .menu-list li a {
     font-size: 20px;
     color: #fff;
@@ -916,6 +967,19 @@ span {
     max-width: 100%;
   }
 
+  .menu-list li {
+    width: 20%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 15px 0;
+  }
+  .menu-list li:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  .menu-list li a {
+    font-size: 10px;
+    color: #fff;
+  }
   .hero-images {
     transform: translateX(-20%);
   }
@@ -936,7 +1000,6 @@ span {
     margin-top: 25px;
   }
 }
-
 @media (max-width: 511px) {
   .get-app-images__instagram {
     right: 25%;
