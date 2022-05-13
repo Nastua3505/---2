@@ -76,6 +76,15 @@ p {
   list-style-type: none;
   justify-content: space-between;
 }
+
+.menu-list__item a:visited {
+  color: #030303; /* Цвет посещённой ссылки */
+}
+.menu-list__item a:hover {
+  color: #783a86; /* Цвет ссылки при наведении на нее курсора мыши */
+  text-decoration: underline; /* Добавляем подчеркивание */
+}
+
 .footer-head .menu-list__item a {
   color: #fff;
   transition: color 0.5s ease;
